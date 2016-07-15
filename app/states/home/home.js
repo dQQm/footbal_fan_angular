@@ -20,7 +20,6 @@
         var directive = {
             templateUrl: './states/home/home.html',
             restrict: 'E',
-            controller: controller,
             scope: {}
         };
 

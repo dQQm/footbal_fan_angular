@@ -3,16 +3,16 @@
 
     angular
         .module('app')
-        .directive('resultState', directive)
+        .directive('resultsState', directive)
         .config(config);
 
     config.$inject = ['$stateProvider'];
     function config($stateProvider) {
         $stateProvider
-            .state('result', {
+            .state('results', {
                 url: '/results',
-                title: 'Result',
-                template: '<result-state></result-state>'
+                title: 'Results',
+                template: '<results-state></results-state>'
             });
     }
 
@@ -26,10 +26,9 @@
 
         return directive;
     }
-    controller.$inject = ['$scope', 'getResult'];
-    function controller($scope, getResult) {
-        console.log(getResult);
-        $scope.teams = getteams.teams;
-        }   
-    }
+
+    controller.$inject = ['$scope', 'getResults'];
+    function controller($scope, getResults) {
+        console.log(getResults);
+    }   
 }(angular));

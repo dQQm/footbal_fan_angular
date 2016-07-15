@@ -5,17 +5,17 @@
 
     angular
         .module('app')
-        .factory('getteams', service);
+        .factory('getResults', service);
 
     service.$inject = ['$http'];
 
     function service($http) {
-        getTeams();
+        getResults();
         return {
             result: result,
         };
 
-        function getResult() {
+        function getResults() {
             $http({
                 headers: {
                 'X-Auth-Token': '825dbab35fe94c798367d5545f987daf'
