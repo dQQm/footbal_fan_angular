@@ -1,6 +1,7 @@
 var gulp = require('gulp');
 var config = require('./gulp.config')();
 var del = require('del');
+var concat = require('gulp-concat');
 var $ = require('gulp-load-plugins')({lazy: true});
 
 gulp.task('connect', function () {
@@ -33,15 +34,9 @@ gulp.task('lint', function () {
 gulp.task('styles', [/*'clean-styles'*/], function () {
     log('Compiling Sass --> CSS');
 
-    return gulp.src('./app/styles/scss/builderapp.scss')
-        .pipe($.plumber())
-        .pipe($.cssGlobbing({
-            extensions: ['.scss']
-        }))
+    return gulp.src(['./app/styles/scss/builderapp.scss', './app/components/**/*.scss', './app/states/**/*.scss'])
         .pipe($.sass())
-        .pipe($.autoprefixer({
-            browsers: ['last 2 versions', '> 5%']
-        }))
+        .pipe(concat('builderapp.css'))
         .pipe(gulp.dest(config.temp));
 });
 

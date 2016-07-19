@@ -21,30 +21,13 @@
     </head>
     <body>
         <header role="banner">
-            <h1 id="title">Football Fan</h1>
-            <img role="logo" id="logo" src="assets/logo.png"/>
-            <nav class="nav">
-                <div id="menu">
-                    <h2>MENU</h2>
-                </div>
-                <div id="toggle-nav">
-                    <div class="toggle-nav" onclick="menu()"></div>
-                    <ul class="menu">
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="teams.html">Teams</a></li>
-                        <li><a href="score.html">Score Board</a></li>
-                        <li><a href="fan_zone.html">Fan Zone</a></li>
-                        <li><a href="under_construction.html">News</a></li>
-                    </ul>
-                    <div>
-                    </nav>
+
                 </header>
                 <!--[if lt IE 10]>
                 <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade
                 your browser</a> to improve your experience.</p>
                 <![endif]-->
                 <div class="container">
-                    <menu></menu>
                     <div class="row content">
                         <div class="col-md-12">
                             <ui-view></ui-view>
@@ -52,21 +35,7 @@
                     </div>
                 </div>
                  <footer role="contentinfo">
-                    <div class="footer-content">
-                        <p>Follow us on :</p>
-                        <div id="social-media">
-                            <div id="facebook">
-                            </div>
-                            <div id="youtube">
-                            </div>
-                            <div id="twitter">
-                            </div>
-                        </div>
-                        <address>
-                            <p>For further information, please contact <a href="mailto:admin@example.com">Maria Zhingova</a>.</p>
-                        </address>
-                        <small>Copyright &copy; <time datetime="2016">2016</time></small>
-                    </div>
+
                 </footer>
                 <!-- build:js js/lib.js -->
                 <!-- bower:js -->
@@ -145,12 +114,8 @@
                 <script src="services/notify.js"></script>
                 <script src="services/t.js"></script>
                 <script src="components/action/action.js"></script>
-                <script src="components/menu/menu.js"></script>
-                <script src="libs/datatables/datatables.min.js"></script>
-                <script src="services/translations/de.js"></script>
-                <script src="states/cities/cities.js"></script>
-                <script src="states/cities/citiesService.js"></script>
-                <script src="states/hi/hi.js"></script>
+                <script src="components/footer/footer.js"></script>
+                <script src="components/header/header.js"></script>
                 <script src="states/home/home.js"></script>
                 <script src="states/players/getPlayers.js"></script>
                 <script src="states/players/players.js"></script>
@@ -158,6 +123,9 @@
                 <script src="states/results/results.js"></script>
                 <script src="states/teams/getteams.js"></script>
                 <script src="states/teams/teams.js"></script>
+                <script src="components/menu/menu.js"></script>
+                <script src="libs/datatables/datatables.min.js"></script>
+                <script src="services/translations/de.js"></script>
                 <script src="components/form/input/input.js"></script>
                 <!-- endinject -->
                 <!-- inject:templates:js -->
