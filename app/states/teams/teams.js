@@ -27,11 +27,13 @@
         return directive;
     }
 
-    controller.$inject = ['$scope', 'getteams'];
-    function controller($scope, getteams) {
-        console.log(getteams);
+    controller.$inject = ['$scope', '$state', 'getteams'];
+    function controller($scope, $state, getteams) {
         $scope.teams = getteams.teams;
+        $scope.redirect = redirect;
         function redirect(teamName) {
+
+            //redirection to a diferent state
             $state.go('players',{teamName:teamName});
         }   
     }

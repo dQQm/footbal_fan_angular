@@ -1,4 +1,4 @@
-<div class="tema" ng-repeat="teams in teams" ng-click="redirect(teams.name)">
-	<img class="flag" ng-src="{{teams.crestUrl}}"/>
+<div class="tema" ng-repeat="teams in teams" >
+	<img class="flag" ng-src="{{teams.crestUrl}}" ng-click="redirect(teams.name)"/>
 	<h3 class="teamName">{{teams.name}}</h3>
 </div>
