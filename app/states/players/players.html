@@ -1,1 +1,6 @@
-players: {{players}}
+<div ng-repeat="players in players">
+	<h2>Name: {{players.name}} </h2>
+	<p>Date of birth: {{moment(players['date of birth'], 'DD/MM/YYYY').format('DD.MM.YYYY')}} </p>
+	<p>Position: {{position}} </p>
+	<p>Bio: {{players.bio}}</p>
+</div>

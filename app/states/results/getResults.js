@@ -23,7 +23,7 @@
                 methood: 'GET',
                 url: 'http://api.football-data.org/v1/soccerseasons/424/fixtures',
             }).then(function successCallback(response) {
-                    _.assign(result, response.data);
+                    _.assign(result, response.data.fixtures);
             }, function errorCallback(response) {
                 console.log("error"+response);
             });

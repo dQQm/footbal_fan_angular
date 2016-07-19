@@ -1,3 +1,14 @@
-<div>
-
+<div ng-repeat="score in score" >
+	<div>
+		Away team: {{score.awayTeamName}}
+		<p ng-class="checkWinner(score.result.goalsAwayTeam, score.result.goalsHomeTeam)" >
+		Score: {{score.result.goalsAwayTeam}}
+		</p>
+	</div>
+	<div>
+		Away team: {{score.homeTeamName}}
+		<p ng-class="checkWinner(score.result.goalsHomeTeam, score.result.goalsAwayTeam)" >
+		Score: {{score.result.goalsHomeTeam}}
+		</p>
+	</div>
 </div>

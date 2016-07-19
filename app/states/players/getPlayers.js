@@ -1,8 +1,6 @@
 (function (angular) {
     'use strict';
 
-    var players = '';
-
     angular
         .module('app')
         .factory('getPlayers', service);
@@ -14,25 +12,23 @@
             displayPlayers: displayPlayers,
         };
         function displayPlayers(teamName) {
-            var deferred = $q.defer();
-            //var  name = teamName.replace(/\s/g,'_');
+            var name = teamName.teamName;
+            var defer = $q.defer();
+            name = name.replace(/\s/g,'_');
+
                 $http.get('/data/players.json')
                     .then(function(response) {
-                        /*var len = response.teams.length;
-                        for(let i = 0;i < len;i++){
-                            if(players[i].team === name){
-                                players = players[i];
-                                return players;
-                                break;
-                        }
-                    }*/
+                        var temp = response.data.teams;
+                        var res = _.filter(temp, { 'team': name})
+                        _.assign(res, res[0].players);
+                        console.log(res);
+                        defer.resolve(res);
+                    })
+                    .catch(function(error) {
+                        defer.reject(error);
+                    });
 
-                    
-                        return response;
-                });
-
-
-            return deferred.promise;
+            return defer.promise;
         }
     }
 

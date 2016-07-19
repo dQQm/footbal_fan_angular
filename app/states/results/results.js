@@ -29,6 +29,21 @@
 
     controller.$inject = ['$scope', 'getResults'];
     function controller($scope, getResults) {
-        console.log(getResults);
+        $scope.score = getResults.result;
+        $scope.checkWinner = checkWinner;
+
+        function checkWinner(team1, team2) {
+            console.log('team1'+team1)
+            if(team1 === team2) {
+                return 'blue';
+            } else if(team1 > team2) {
+                return 'green';
+            }else {
+                return 'red';
+            }
+        }
+
     }   
 }(angular));
+
+        

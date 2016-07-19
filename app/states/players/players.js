@@ -10,7 +10,7 @@
     function config($stateProvider) {
         $stateProvider
             .state('players', {
-                url: '/players',
+                url: '/players/:teamName',
                 title: 'Players',
                 template: '<players-state></players-state>',
                 params: {
@@ -32,10 +32,11 @@
 
     controller.$inject = ['$scope', '$stateParams', 'getPlayers'];
     function controller($scope, $stateParams, getPlayers) {
-
-            getPlayers.displayPlayers($stateParams).then( function(players) {
-                $scope.players = players;
-            });
+            $scope.moment = moment;
+            getPlayers.displayPlayers($stateParams)
+                .then( function(result) {
+                    $scope.players = result;
+                });
 
    
     }

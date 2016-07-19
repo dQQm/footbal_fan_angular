@@ -31,6 +31,8 @@
     function controller($scope, $state, getteams) {
         $scope.teams = getteams.teams;
         $scope.redirect = redirect;
+        $scope.chwckWinner = checkWinner;
+
         function redirect(teamName) {
 
             //redirection to a diferent state
