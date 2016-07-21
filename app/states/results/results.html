@@ -1,14 +1,16 @@
-<div ng-repeat="score in score" >
-	<div>
-		Away team: {{score.awayTeamName}}
-		<p ng-class="checkWinner(score.result.goalsAwayTeam, score.result.goalsHomeTeam)" >
-		Score: {{score.result.goalsAwayTeam}}
-		</p>
+<div class="wrap">
+	<main role="teams" class="content">
+	<div class="match" ng-repeat="score in score" >
+		<div class="team left">{{score.awayTeamName}}
+			<div class="score" ng-class="checkWinner(score.result.goalsAwayTeam, score.result.goalsHomeTeam)" >
+				{{score.result.goalsAwayTeam}}
+			</div>
+		</div>
+		<div class="team"> {{score.homeTeamName}}
+			<div class="score" ng-class="checkWinner(score.result.goalsHomeTeam, score.result.goalsAwayTeam)" >
+				{{score.result.goalsHomeTeam}}
+			</div>
+		</div>
 	</div>
-	<div>
-		Away team: {{score.homeTeamName}}
-		<p ng-class="checkWinner(score.result.goalsHomeTeam, score.result.goalsAwayTeam)" >
-		Score: {{score.result.goalsHomeTeam}}
-		</p>
-	</div>
+	</main>
 </div>

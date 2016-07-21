@@ -35,11 +35,11 @@
         function checkWinner(team1, team2) {
             console.log('team1'+team1)
             if(team1 === team2) {
-                return 'blue';
+                return 'neutral';
             } else if(team1 > team2) {
-                return 'green';
+                return 'winner';
             }else {
-                return 'red';
+                return 'loser';
             }
         }
 

@@ -1,6 +1,6 @@
 home-state {
         
-    .content{
+    .articles-content{
         width:80%;
         margin:0 auto;
         padding-top:3%;
@@ -45,7 +45,7 @@ home-state {
     .articles{
         display:flex;
     }
-    .container{
+    .articles-container{
     background-color:white;
     }
     iframe{
@@ -76,9 +76,6 @@ home-state {
     .news-img{
     width:100%;
     }
-
-
-
 
     #slideshow { 
          

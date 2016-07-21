@@ -19,6 +19,10 @@
     controller.$inject = ['$scope', 'conf'];
     function controller($scope, conf) {
         console.log($scope.conf);
+        $scope.colapse = true;
+        $scope.toggleNav = function(){
+            $scope.collapse = !$scope.collapse;
+        }
     }
 
 }(angular));

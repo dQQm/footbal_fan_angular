@@ -1,0 +1,17 @@
+.teams{
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-wrap: wrap;
+	    flex-wrap: wrap;
+	-ms-flex-pack: distribute;
+	    justify-content: space-around;
+}
+
+.flag{
+	width:350px;
+	height:200px;
+	cursor:pointer;
+}
+h3{
+	text-align:center;
+}

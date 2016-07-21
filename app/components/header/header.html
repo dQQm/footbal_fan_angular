@@ -5,8 +5,8 @@
         <h2>MENU</h2>
     </div>
     <div id="toggle-nav">
-        <div class="toggle-nav" onclick="menu()"></div>
-        <ul class="menu">
+        <div class="toggle-nav" ng-click="toggleNav()"></div>
+        <ul class="menu" ng-show="collapse">
             <li><a ui-sref="home">Home</a></li>
             <li><a ui-sref="teams">Teams</a></li>
             <li><a ui-sref="results">Score Board</a></li>

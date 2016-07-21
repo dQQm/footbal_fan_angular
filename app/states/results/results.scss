@@ -1,0 +1,50 @@
+.content{
+	display:-ms-flexbox;
+	display:flex;
+	width:80%;
+	-ms-flex-line-pack:distribute;
+	    -ms-flex-pack:distribute;
+	        justify-content:space-around;
+	    -ms-flex-wrap: wrap;
+	        flex-wrap: wrap;
+	        margin:0 auto;
+}
+
+.match{
+	display:flex;
+	flex-flow: row wrap;
+	width:30%;
+	margin:0.5%;
+	text-transform: uppercase;
+	font-weight: 900;
+}
+
+.loser{
+  background-color:rgb(239, 44, 49);;
+}
+.winner {
+  background-color:rgba(77, 173, 77, 0.84);
+  
+}
+.neutral{
+  background-color:#226BFE;
+}
+
+.team{
+	background-color:#eaeaea;
+}
+
+.team, .loser, .winner{
+	padding:5%;
+	width:40%;
+}
+.left{
+  border-top-left-radius:40%;
+}
+
+.score{
+   text-align:center;
+   padding:5%;  
+   width:20%;
+  
+}

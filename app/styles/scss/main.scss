@@ -1,3 +1,133 @@
-.content {
-    margin-top: 60px;    
+@import url(https://fonts.googleapis.com/css?family=Oswald:400,700);
+/*---Body ---*/
+body{
+	background:url('../assets/b.png') no-repeat;
+	background-size:100% 100%;
+	font-family:Oswald;
+}
+/* ----navigation menu---- */
+ul{
+	//display:none;
+	list-style-type: none;
+	position: absolute;
+}
+
+ li{
+ 	margin:10%;
+ 	border-bottom:1px blue solid;
+ }
+
+ li a{
+ 	text-decoration:none;
+ 	color:white;
+ }
+
+ .nav {
+ 	display:inline-flex;
+ 	margin-right:2%;
+ }
+
+ #toggle-nav{
+ 	margin-top: 25%;
+ }
+
+.toggle-nav{
+  	text-decoration:none;
+  	cursor:pointer;
+    width: 200px;
+    height: 200px;
+    background: url('../assets/sprite.png') -591px 0;
+    zoom: 30%;
+    margin-top:55%;
+    
+}
+#menu{
+	margin-right: 2%;
+	margin-top:50%;
+	color:white;
+}
+.menu{
+	position: absolute;
+	background-color: #037abe;
+    width: 10%;
+    padding:0;
+}
+/*----Header-----*/
+
+header{
+	display: fixed;
+	display:-ms-flexbox;
+	display:flex;
+	-ms-flex-pack:distribute;
+	    justify-content:space-around;
+
+}
+.page-tittle{
+	background-color: gray;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding-left:3%;
+}
+/*---Logo---*/
+
+#logo{
+	
+	height:220px;
+	margin-right: 4%;
+}
+#title{
+	margin-top:6%;
+	color:white;
+}
+
+
+/*-----Main content------*/
+.wrap{
+	padding-top:5%;
+	padding-bottom:5%;
+	background-color:white;
+}
+
+
+
+/*----FOOTER----*/
+
+footer{
+	margin-bottom:5%;
+	margin-top: 2%;
+}
+.footer-content > * {
+text-align:center;
+}
+.footer-content{
+	margin:0 auto;
+}
+
+	/*------Social media icons-----*/
+#social-media{
+	display: inline-flex;
+	margin-left: 43%;
+}
+#facebook{
+    background: url('../assets/sprite.png') -186px 0;
+}
+
+#twitter{
+
+	background: url('../assets/sprite.png') -367px 0;
+}
+
+#youtube{
+    background: url('../assets/sprite.png') -367px -184.3px;
+}
+
+#youtube, #twitter, #facebook{    
+	width: 200px;
+    height: 200px;
+    cursor: pointer;
+	zoom: 30%;
+}
+small{
+margin-left:5%;
+color:white;
 }
