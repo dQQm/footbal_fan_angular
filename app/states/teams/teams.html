@@ -1,4 +1,7 @@
-<div class="tema" ng-repeat="teams in teams" >
+<div class="search">
+	Search: <input type="search" name="search" ng-model="search">
+</div>
+<div class="tema" ng-repeat="teams in teams | filter:search" >
 	<img class="flag" ng-src="{{teams.crestUrl}}" ng-click="redirect(teams.name)"/>
 	<h3 class="teamName">{{teams.name}}</h3>
 </div>
