@@ -1,8 +1,9 @@
+ <h2 class="page-tittle">Score Board</h2>
 <div class="wrap">
 	<main role="teams" class="content">
 	<div class="match" ng-repeat="score in score" >
 		<div class="team left">{{score.awayTeamName}}
-			<div class="score" ng-class="checkWinner(score.result.goalsAwayTeam, score.result.goalsHomeTeam)" >
+			<div ng-class="checkWinner(score.result.goalsAwayTeam, score.result.goalsHomeTeam)" class="score" >
 				{{score.result.goalsAwayTeam}}
 			</div>
 		</div>

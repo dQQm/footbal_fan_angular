@@ -1,18 +1,14 @@
-<<<<<<< HEAD
-<h2 class="page-tittle">Teams</h2>
+<div class="page-tittle-teams">
+	<h2 class="page-title">Teams</h2>
+	<div class="search">
+		<h4>Search:</h4><input type="search" name="search" ng-model="search">
+	</div>
+</div>
 <div class="wrap">
 	<main role="teams" class="teams">
-	
-	<div class="tema" ng-repeat="teams in teams" >
+	<div class="tema" ng-repeat="teams in teams | filter:search" >
 		<img class="flag" ng-src="{{teams.crestUrl}}" ng-click="redirect(teams.name)"/>
 		<h3 class="teamName">{{teams.name}}</h3>
 	</div>
 	</main>
-
-<div class="search">
-	Search: <input type="search" name="search" ng-model="search">
-</div>
-<div class="tema" ng-repeat="teams in teams | filter:search" >
-	<img class="flag" ng-src="{{teams.crestUrl}}" ng-click="redirect(teams.name)"/>
-	<h3 class="teamName">{{teams.name}}</h3>
 </div>

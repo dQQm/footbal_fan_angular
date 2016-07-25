@@ -8,10 +8,21 @@
 }
 
 .flag{
-	width:350px;
-	height:200px;
-	cursor:pointer;
+	width: 350px;
+	height: 200px;
+	cursor: pointer;
 }
 h3{
-	text-align:center;
+	text-align: center;
+}
+.page-tittle-teams{
+	background: gray;
+}
+.page-tittle-teams >*, .search>* {
+	display: inline-block;
+}
+.search{
+	position: absolute;
+    right: 0px;
+    margin:2%;
 }
