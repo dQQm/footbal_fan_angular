@@ -10,7 +10,7 @@
     function config($stateProvider) {
         $stateProvider
             .state('fanZone', {
-                url: '/',
+                url: '/fanZone',
                 title: 'Fan Zone',
                 template: '<fan-zone></fan-zone>'
             });

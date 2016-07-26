@@ -33,13 +33,12 @@
         $scope.checkWinner = checkWinner;
 
         function checkWinner(team1, team2) {
-            console.log('team1'+team1)
             if(team1 === team2) {
-                return 'neutral';
+                return 'neutral score';
             } else if(team1 > team2) {
-                return 'winner';
+                return 'winner score';
             }else {
-                return 'loser';
+                return 'loser score';
             }
         }
 
